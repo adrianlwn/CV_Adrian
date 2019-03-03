@@ -1,0 +1,218 @@
+\documentclass{article}
+% Package Imports
+
+\usepackage[hmargin=1cm, vmargin=1cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage[absolute]{textpos}
+\usepackage[UKenglish]{babel}
+\usepackage[UKenglish]{isodate}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fontspec,xltxtra,xunicode}
+\usepackage{titlesec}
+\usepackage{fontawesome}
+
+\pagestyle{empty}
+
+% Color definitions
+\definecolor{date}{HTML}{000000} 
+\definecolor{primary}{HTML}{000000} 
+\definecolor{headings}{HTML}{6A6A6A}
+\definecolor{subheadings}{HTML}{555555}
+
+% Set main fonts
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[
+ BoldFont={Lato Bold}, 
+ ItalicFont={Lato Italic},
+ BoldItalicFont={Lato Bold Italic}
+ ]{Lato}
+\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Lato}
+
+\newfontfamily{\headingfont}{Raleway}[
+    Path = fonts/,
+    Extension = .ttf,
+    UprightFont = *-Regular,
+    BoldFont = *-SemiBold
+    ]
+
+% Headings command
+\titleformat{\section}{\color{headings}\headingfont\scshape\bfseries\LARGE}{}{0em}{}[{\titlerule[0.4pt]}]
+\titlespacing{\section}{0pt}{3pt}{5pt}
+
+% Subsection command
+\titleformat{\subsection}[runin]{\color{primary}\headingfont\bfseries\large}{}{0em}{}[]
+\titlespacing*{\subsection}{0pt}{0pt}{8pt}
+
+
+% Description COmmand 
+\newcommand{\descript}[1]{\color{subheadings}\scshape\normalfont {#1\\} }
+\newcommand{\longdescript}[1]{\color{subheadings}\scshape\normalfont\small {#1\\} }
+
+% Location command
+\newcommand{\location}[1]{\color{primary}\headingfont {\hfill #1\\} }
+
+
+% Section seperators command
+\newcommand{\sectionsep}[0]{\vspace{-6pt}}
+% Bullet Lists with fewer gaps command
+\newenvironment{tightemize}{\vspace{-2\topsep}\begin{itemize}\itemsep1pt \parskip0pt \parsep0pt}{\end{itemize}\vspace{\topsep}}
+
+% Name command
+\newcommand{\namesection}[4]{
+	\begin{center}
+		\sffamily
+		\headingfont\fontsize{35pt}{14pt}\selectfont\scshape #1 
+			\headingfont\selectfont\scshape\bfseries #2
+	\end{center}
+	\vspace{-10pt}
+    	\begin{center} \color{headings}\normalfont\fontsize{13pt}{14pt}\selectfont #4
+		\end{center}
+	\vspace{-13pt}
+		\begin{center} \color{subheadings}\normalfont\fontsize{11pt}{14pt}\selectfont #3
+		\end{center}
+	
+	%\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+	\vspace{-5pt}
+	}
+
+
+\newcommand{\mybullet}[1]{ \hspace{2pt}\textbullet{#1}\hspace{2pt} }
+%%%%%%%%%%%%%%%%%%%%% BEGIN %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%% DOCUMENT %%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%% NAME %%%%%%%%%%%%%%%%%%%% 
+
+\namesection{Adrian}{Löwenstein}{\href{https://github.com/adrianlwn}{\faGithubSquare{}  github}  | \href{https://www.linkedin.com/in/adrian-löwenstein/ }{\faLinkedinSquare{}  linkedin} |  \href{mailto:adrian.loewenstein@icloud.com}{\faEnvelope{} adrian.loewenstein@icloud.com} |  \faPhoneSquare{} +33 7 67 88 52 57  \\ French Nationality |  Born 21.11.1993 }{``On ne voit bien qu'avec le cœur. L'essentiel est invisible pour les yeux.''}
+
+
+%%%%%%%%%%%%%%%%%%%% SOFT SKILLS %%%%%%%%%%%%%%%%%%%% 
+\section{Soft Skills}
+\subsection{Qualities}
+\longdescript{Reasoning \mybullet{} Analysis \mybullet{} Adaptability \mybullet{} Curiosity \mybullet{} Creativity }
+\sectionsep
+\subsection{Language }
+\longdescript{French [Native] \mybullet{} English [C1] \mybullet{} German [B2] }
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%% TECHNICAL SKILLS %%%%%%%%%%%%%%%%%%%% 
+
+\section{Technical Skills}
+\subsection{Computer Science} 
+\descript{Classical Machine Learning \mybullet{} Reinforcement Learning \mybullet{} Deep Learning \mybullet{} Computer Vision \\ \hspace*{3pt} \mybullet{} Probabilistic Inference [Gaussian Processes, Bayesian Optimisation] \mybullet{} Computational Finance \mybullet{} Networking [Routing, TCP-IP] } 
+\sectionsep
+
+\subsection{Electrical Engineering}
+\descript{Electrical Grid Control \& Modelling \mybullet{} Electricity Market \mybullet{} Energy Storage \mybullet{} Energy Generation\\  \hspace*{3pt} \mybullet{} Model Predictive Control \mybullet{} State Space Control \mybullet{} Computational Optimisation}
+\sectionsep
+
+\subsection{Programming}
+\descript{Python [Pytorch, Pandas, Numpy, Scikit-Learn] \mybullet{} C \mybullet{} C++ \mybullet{} Matlab [YALMIP] \mybullet{} \LaTeX \mybullet{} Git \mybullet{} Javascript [D3.js]}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%% EDUCATION %%%%%%%%%%%%%%%%%%%%% 
+\section{Education}
+
+\subsection{Imperial College London}
+\location{London, United Kingdom | Sept. 2019}
+\descript{MSc in Computing | Machine Learning }
+\sectionsep
+\subsection{Ecole Polytechnique Fédérale de Lausanne | EPFL }
+\location{Lausanne, Switzerland | July 2018}
+\descript{MSc in Electrical Engineering  | Smart Grids Science | Average : 5.31 / 6.0}
+\sectionsep
+
+\subsection{Eidgenössische Technische Hochschule Zürich | ETHZ }
+\location{Zürich, Switzerland | Aug. 2015}
+\descript{Exchange in 3rd Year of BSc}
+\sectionsep
+
+\subsection{Ecole Polytechnique Fédérale de Lausanne | EPFL}
+\location{Lausanne, Switzerland | Feb. 2016}
+\descript{BSc in Electrical Engineering | Average : 4.8 / 6.0}
+\sectionsep
+
+\subsection{Lycée Pasteur}
+\location{Neuilly-sur-Seine, France | July 2012}
+\descript{Preparatory Course for Engineering Schools}
+\sectionsep
+
+%\subsection{Institut de la Tour}
+%\location{Paris, France | July 2011}
+%\descript{High-school | French Baccalaureate  - Highest Honors}
+%\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%% EXPERIENCE %%%%%%%%%%%%%%%%%%%%% 
+
+\section{Professional Experience}
+\subsection{Ecole Polytechnique Fédérale de Lausanne | EPFL}
+\location{Lausannne, Switzerland | 2015 - 2018}
+\descript{Teaching Assistant }
+\longdescript{Electrical Systems and Electronics I | Dr. Adil Koukab | Spring 2017 \& 2018\\
+Electrotechnics I | Pr. Oliver Martin | Autumn 2015 \& 2016 \\
+Microcontrollers | Pr. Alexandre Schmidt | Spring 2015
+}
+\sectionsep
+\subsection{Commissariat à L’Energie Atomique | CEA}
+\location{Le Bourget du Lac, France | June 2016 - Aug 2016}
+\descript{MSc Internship}
+\longdescript{Internship at \textit{Institut National de l'Energie Solaire} (INES) - Development and validation of energy management strategies in Smart Grids. Study of battery models and implementation in a battery simulator. Evaluation on a Solar Microgrid of battery charging strategies.}
+\sectionsep
+
+\subsection{Airbus Helicopters UK }
+\location{Oxford, United Kingdom |  June 2011 – July 2011}
+\descript{Internship}
+\longdescript{Introductory Internship done between the French Baccalaureate and the beginning of my studies.}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%% EXTRA CURICULAR %%%%%%%%%%%%%%%%%%%%% 
+\section{Extra Curicular}
+\subsection{Associative}
+\descript{EPFL Electrical Engineering Students Association \mybullet{} EPFL Photography Club }
+\sectionsep
+\subsection{Others}
+\descript{Photography [Digital, Analog] \mybullet{}  Video Making \mybullet{}  Hiking \mybullet{} Skiing \mybullet{} Discovery Travelling [Peru, China, Iran]} 
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%% EXTRA CURICULAR %%%%%%%%%%%%%%%%%%%%% 
+\newpage
+\section{Projects}
+
+
+\subsection{Provision of Multiple Services to the Grid with Plug-In-Electrical-Vehicles}
+\location{EPFL, Lausanne | Spring 2018}
+\descript{Master Thesis |  \href{https://stisrv13.epfl.ch/masters/img/960.pdf}{\faBook{} Poster of the Project} }
+\longdescript{Using Electrical Vehicles for providing services to the grid, such as Frequency Regulation. Optimisation problem using real transportation data to determine the regulation capacity for the electricity markets. Using Matlab, Gurobi solver and YALMIP. Supervised by Pr. C. Jones.}
+\sectionsep
+
+\subsection{Tweet Awareness - Data Analysis}
+\location{EPFL, Lausanne | Autumn 2017}
+\descript{Group Project | \href{https://tweet-awareness.eu}{\faGlobe{} Data Story}}
+\longdescript{Data Analysis Project on how to measure the \textbf{awareness} of people about dramatic events around the world and how to correlate it to \textbf{cultural distances}. Data \textbf{extraction} from twitter using Python (Selenium, BeautifulSoup). Data \textbf{analysis} using Python (Pandas, Sklearn). Data \textbf{visualisation} using Javascript (D3.js).
+Group Project created in the context of the Applied Data Analysis course of Pr. R. West.}
+\sectionsep
+
+\subsection{Robust restoration in DG-incorporated distribution networks}
+\location{EPFL, Lausanne | Autumn 2017}
+\descript{MSc Semester Project }
+\longdescript{Formulation and implementation of the \textbf{Restoration Problem} in Electrical Grid, a Mixed-Integer-Non-Linear Optimisation Problem. Implementation using Matlab and the Gurobi solver. Supervised by Dr. R. Cherkaoui.}
+\sectionsep
+
+\subsection{ETR applied to Fault Detection in Power Networks}
+\location{EPFL, Lausanne | Spring 2017}
+\descript{MSc Semester Project | \href{https://infoscience.epfl.ch/record/256592?ln=en}{\faBook{} Conference Paper}}
+\longdescript{Investigating the physical application of the Electromagnetic Time Reversal (ETR) principle, in the context of fault detection in \textbf{Electrical Grids}.  Supervised by Pr. F. Rachidi.  Three weeks residency spend at \textbf{Amir-Kabir University in Tehran} for this project. }
+\sectionsep
+
+\subsection{H$_2$O$_2$ Fuel Cell and Electrolyser Analysis and Monitoring}
+\location{EPFL, Lausanne | Spring 2016 }
+\descript{BSc Project | \href{https://desl-pwrs.epfl.ch}{\faGlobe{} EPFL Microgrid}}
+\longdescript{Implementation of a \textbf{Monitoring System} (in LabView) for a Fuel Cell and Electrolyser in the context of a Lab Microgrid. Supervised by Pr. M. Paolone.}
+\sectionsep
+
+
+
+
+\end{document}
