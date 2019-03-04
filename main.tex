@@ -1,7 +1,7 @@
 \documentclass{article}
 % Package Imports
 
-\usepackage[hmargin=1cm, vmargin=1cm]{geometry}
+\usepackage[hmargin=1cm, vmargin=1.5cm]{geometry}
 \usepackage[hidelinks]{hyperref}
 \usepackage[absolute]{textpos}
 \usepackage[UKenglish]{babel}
@@ -51,7 +51,6 @@
 % Location command
 \newcommand{\location}[1]{\color{primary}\headingfont {\hfill #1\\} }
 
-
 % Section seperators command
 \newcommand{\sectionsep}[0]{\vspace{-6pt}}
 % Bullet Lists with fewer gaps command
@@ -64,17 +63,13 @@
 		\headingfont\fontsize{35pt}{14pt}\selectfont\scshape #1 
 			\headingfont\selectfont\scshape\bfseries #2
 	\end{center}
-	\vspace{-10pt}
-    	\begin{center} \color{headings}\normalfont\fontsize{13pt}{14pt}\selectfont #4
-		\end{center}
-	\vspace{-13pt}
+	\vspace{-14pt}
 		\begin{center} \color{subheadings}\normalfont\fontsize{11pt}{14pt}\selectfont #3
 		\end{center}
 	
 	%\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
 	\vspace{-5pt}
 	}
-
 
 \newcommand{\mybullet}[1]{ \hspace{2pt}\textbullet{#1}\hspace{2pt} }
 %%%%%%%%%%%%%%%%%%%%% BEGIN %%%%%%%%%%%%%%%%%%%%%%%%
@@ -83,13 +78,14 @@
 \begin{document}
 %%%%%%%%%%%%%%%%%%%% NAME %%%%%%%%%%%%%%%%%%%% 
 
-\namesection{Adrian}{Löwenstein}{\href{https://github.com/adrianlwn}{\faGithubSquare{}  github}  | \href{https://www.linkedin.com/in/adrian-löwenstein/ }{\faLinkedinSquare{}  linkedin} |  \href{mailto:adrian.loewenstein@icloud.com}{\faEnvelope{} adrian.loewenstein@icloud.com} |  \faPhoneSquare{} +33 7 67 88 52 57  \\ French Nationality |  Born 21.11.1993 }{``On ne voit bien qu'avec le cœur. L'essentiel est invisible pour les yeux.''}
+\namesection{Adrian}{Löwenstein}{\href{https://github.com/adrianlwn}{\faGithubSquare{}  github}  | \href{https://www.linkedin.com/in/adrianloewenstein}{\faLinkedinSquare{}  linkedin} |  \href{mailto:adrian.loewenstein@icloud.com}{\faEnvelope{} adrian.loewenstein@icloud.com} |  \href{tel:+33767885257}{\faPhoneSquare{} +33 7 67 88 52 57}  \\ French Nationality | Born 21.11.1993}
+%{``On ne voit bien qu'avec le cœur. L'essentiel est invisible pour les yeux.''}
 
 
 %%%%%%%%%%%%%%%%%%%% SOFT SKILLS %%%%%%%%%%%%%%%%%%%% 
 \section{Soft Skills}
 \subsection{Qualities}
-\longdescript{Reasoning \mybullet{} Analysis \mybullet{} Adaptability \mybullet{} Curiosity \mybullet{} Creativity }
+\longdescript{Reasoning \mybullet{} Analysis \mybullet{} Adaptability \mybullet{} Curiosity \mybullet{} Creativity \mybullet{} Team Spirit }
 \sectionsep
 \subsection{Language }
 \longdescript{French [Native] \mybullet{} English [C1] \mybullet{} German [B2] }
@@ -179,7 +175,12 @@ Microcontrollers | Pr. Alexandre Schmidt | Spring 2015
 %%%%%%%%%%%%%%%%%%%%% EXTRA CURICULAR %%%%%%%%%%%%%%%%%%%%% 
 \newpage
 \section{Projects}
-
+\subsection{Gaussian Processes for Optimal Sensor Position}
+\location{Imperial College, London | Summer 2019}
+\descript{Master Thesis }
+\longdescript{Employment of a Gaussian Process (GP) model to calculate the optimal spatial positioning of sensors to study and collect air pollution data in big cities. Validation with data assimilation software. Ongoing Project. 
+}
+\sectionsep
 
 \subsection{Provision of Multiple Services to the Grid with Plug-In-Electrical-Vehicles}
 \location{EPFL, Lausanne | Spring 2018}
@@ -206,13 +207,10 @@ Group Project created in the context of the Applied Data Analysis course of Pr. 
 \longdescript{Investigating the physical application of the Electromagnetic Time Reversal (ETR) principle, in the context of fault detection in \textbf{Electrical Grids}.  Supervised by Pr. F. Rachidi.  Three weeks residency spend at \textbf{Amir-Kabir University in Tehran} for this project. }
 \sectionsep
 
-\subsection{H$_2$O$_2$ Fuel Cell and Electrolyser Analysis and Monitoring}
+\subsection{H2O2 Fuel Cell and Electrolyser Analysis and Monitoring}
 \location{EPFL, Lausanne | Spring 2016 }
 \descript{BSc Project | \href{https://desl-pwrs.epfl.ch}{\faGlobe{} EPFL Microgrid}}
 \longdescript{Implementation of a \textbf{Monitoring System} (in LabView) for a Fuel Cell and Electrolyser in the context of a Lab Microgrid. Supervised by Pr. M. Paolone.}
 \sectionsep
-
-
-
 
 \end{document}
