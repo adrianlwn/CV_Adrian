@@ -13,20 +13,23 @@
 
 \pagestyle{empty}
 
+
 % Color definitions
-\definecolor{date}{HTML}{000000} 
+\definecolor{darkgray}{HTML}{555555} 
 \definecolor{primary}{HTML}{000000} 
 \definecolor{headings}{HTML}{6A6A6A}
 \definecolor{subheadings}{HTML}{555555}
 
 % Set main fonts
 \defaultfontfeatures{Mapping=tex-text}
-\setmainfont[
- BoldFont={Lato Bold}, 
- ItalicFont={Lato Italic},
- BoldItalicFont={Lato Bold Italic}
- ]{Lato}
-\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Lato}
+\setmainfont{Lato}[
+    Path = fonts/,
+    Extension = .ttf,
+    UprightFont = *-Regular,
+    BoldFont = *-Bold,
+    ItalicFont= *-Italic
+ ]
+
 
 \newfontfamily{\headingfont}{Raleway}[
     Path = fonts/,
@@ -43,10 +46,10 @@
 \titleformat{\subsection}[runin]{\color{primary}\headingfont\bfseries\large}{}{0em}{}[]
 \titlespacing*{\subsection}{0pt}{0pt}{8pt}
 
-
 % Description COmmand 
-\newcommand{\descript}[1]{\color{subheadings}\scshape\normalfont {#1\\} }
-\newcommand{\longdescript}[1]{\color{subheadings}\scshape\normalfont\small {#1\\} }
+\newcommand{\descript}[1]{\color{darkgray}\normalfont \textbf{#1\\}}
+
+\newcommand{\longdescript}[1]{\color{subheadings}\normalfont\small {#1\\} }
 
 % Location command
 \newcommand{\location}[1]{\color{primary}\headingfont {\hfill #1\\} }
@@ -78,7 +81,7 @@
 \begin{document}
 %%%%%%%%%%%%%%%%%%%% NAME %%%%%%%%%%%%%%%%%%%% 
 
-\namesection{Adrian}{Löwenstein}{\href{https://github.com/adrianlwn}{\faGithubSquare{}  github}  | \href{https://www.linkedin.com/in/adrianloewenstein}{\faLinkedinSquare{}  linkedin} |  \href{mailto:adrian.loewenstein@icloud.com}{\faEnvelope{} adrian.loewenstein@icloud.com} |  \href{tel:+33767885257}{\faPhoneSquare{} +33 7 67 88 52 57}  \\ French Nationality | Born 21.11.1993}
+\namesection{Adrian}{Löwenstein}{\href{https://www.adrianlwn.com}{\faGlobe{} adrianlwn.com} | \href{https://github.com/adrianlwn}{\faGithubSquare{}  github}  | \href{https://www.linkedin.com/in/adrianloewenstein}{\faLinkedinSquare{}  linkedin} \\ \href{mailto:adrian.loewenstein@icloud.com}{\faEnvelope{} adrian.loewenstein@icloud.com} |  \href{tel:+33767885257}{\faPhoneSquare{} +33 7 67 88 52 57}  \\ French Nationality | Born 21.11.1993}
 %{``On ne voit bien qu'avec le cœur. L'essentiel est invisible pour les yeux.''}
 
 
@@ -96,44 +99,42 @@
 
 \section{Technical Skills}
 \subsection{Computer Science} 
-\descript{Classical Machine Learning \mybullet{} Reinforcement Learning \mybullet{} Deep Learning \mybullet{} Computer Vision \\ \hspace*{3pt} \mybullet{} Probabilistic Inference [Gaussian Processes, Bayesian Optimisation] \mybullet{} Computational Finance \mybullet{} Networking [Routing, TCP-IP] } 
+\longdescript{Classical Machine Learning \mybullet{} Reinforcement Learning \mybullet{} Deep Learning \mybullet{} Computer Vision \\ \hspace*{3pt} \mybullet{} Probabilistic Inference [Gaussian Processes, Bayesian Optimisation] \mybullet{} Computational Finance \mybullet{} Natural Language Processing } 
 \sectionsep
 
 \subsection{Electrical Engineering}
-\descript{Electrical Grid Control \& Modelling \mybullet{} Electricity Market \mybullet{} Energy Storage \mybullet{} Energy Generation\\  \hspace*{3pt} \mybullet{} Model Predictive Control \mybullet{} State Space Control \mybullet{} Computational Optimisation}
+\longdescript{Electrical Grid Control \& Modelling \mybullet{} Electricity Market \mybullet{} Energy Storage \mybullet{} Energy Generation\\  \hspace*{3pt} \mybullet{} Model Predictive Control \mybullet{} State Space Control \mybullet{} Computational Optimisation}
 \sectionsep
 
 \subsection{Programming}
-\descript{Python [Pytorch, Pandas, Numpy, Scikit-Learn] \mybullet{} C \mybullet{} C++ \mybullet{} Matlab [YALMIP] \mybullet{} \LaTeX \mybullet{} Git \mybullet{} Javascript [D3.js]}
+\longdescript{Python [Pytorch, Pandas, Numpy, Scikit-Learn] \mybullet{} C \mybullet{} C++ \mybullet{} Matlab [YALMIP] \mybullet{} \LaTeX \mybullet{} Git \mybullet{} Javascript [D3.js]}
 \sectionsep
-
 
 %%%%%%%%%%%%%%%%%%%%% EDUCATION %%%%%%%%%%%%%%%%%%%%% 
 \section{Education}
-
 \subsection{Imperial College London}
 \location{London, United Kingdom | Sept. 2019}
-\descript{MSc in Computing | Machine Learning }
+\longdescript{MSc in Computing | Machine Learning }
 \sectionsep
 \subsection{Ecole Polytechnique Fédérale de Lausanne | EPFL }
 \location{Lausanne, Switzerland | July 2018}
-\descript{MSc in Electrical Engineering  | Smart Grids Science | Average : 5.31 / 6.0}
+\longdescript{MSc in Electrical Engineering  | Smart Grids Science | Average : 5.31 / 6.0}
 \sectionsep
 
 \subsection{Eidgenössische Technische Hochschule Zürich | ETHZ }
 \location{Zürich, Switzerland | Aug. 2015}
-\descript{Exchange in 3rd Year of BSc}
+\longdescript{Exchange in 3rd Year of BSc}
 \sectionsep
 
 \subsection{Ecole Polytechnique Fédérale de Lausanne | EPFL}
 \location{Lausanne, Switzerland | Feb. 2016}
-\descript{BSc in Electrical Engineering | Average : 4.8 / 6.0}
+\longdescript{BSc in Electrical Engineering | Average : 4.8 / 6.0}
 \sectionsep
 
-\subsection{Lycée Pasteur}
-\location{Neuilly-sur-Seine, France | July 2012}
-\descript{Preparatory Course for Engineering Schools}
-\sectionsep
+%\subsection{Lycée Pasteur}
+%\location{Neuilly-sur-Seine, France | July 2012}
+%\longdescript{Preparatory Course for Engineering Schools}
+%\sectionsep
 
 %\subsection{Institut de la Tour}
 %\location{Paris, France | July 2011}
@@ -166,26 +167,28 @@ Microcontrollers | Pr. Alexandre Schmidt | Spring 2015
 %%%%%%%%%%%%%%%%%%%%% EXTRA CURICULAR %%%%%%%%%%%%%%%%%%%%% 
 \section{Extra Curicular}
 \subsection{Associative}
-\descript{EPFL Electrical Engineering Students Association \mybullet{} EPFL Photography Club }
+\longdescript{EPFL Electrical Engineering Students Association \mybullet{} EPFL Instagram Student Photographer [@epflstudents] }
 \sectionsep
 \subsection{Others}
-\descript{Photography [Digital, Analog] \mybullet{}  Video Making \mybullet{}  Hiking \mybullet{} Skiing \mybullet{} Discovery Travelling [Peru, China, Iran]} 
+\longdescript{Photography [Digital, Analog] \mybullet{}  Video Editing [Final Cut Pro] \mybullet{}  Hiking \mybullet{} Skiing \mybullet{} Discovery Travelling [Peru, China, Iran]} 
 \sectionsep
 
-%%%%%%%%%%%%%%%%%%%%% EXTRA CURICULAR %%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%% PROJECTS  %%%%%%%%%%%%%%%%%%%%% 
 \newpage
-\section{Projects}
+
+\section{Data Science Projects}
+
 \subsection{Gaussian Processes for Optimal Sensor Position}
 \location{Imperial College, London | Summer 2019}
 \descript{Master Thesis }
-\longdescript{Employment of a Gaussian Process (GP) model to calculate the optimal spatial positioning of sensors to study and collect air pollution data in big cities. Validation with data assimilation software. Ongoing Project. 
+\longdescript{Employment of a Gaussian Process (GP) model to calculate the optimal spatial positioning of sensors to study and collect air pollution data in big cities. Validation with data assimilation software. Data Science Institute (DSI). Ongoing Project. 
 }
 \sectionsep
 
-\subsection{Provision of Multiple Services to the Grid with Plug-In-Electrical-Vehicles}
-\location{EPFL, Lausanne | Spring 2018}
-\descript{Master Thesis |  \href{https://stisrv13.epfl.ch/masters/img/960.pdf}{\faBook{} Poster of the Project} }
-\longdescript{Using Electrical Vehicles for providing services to the grid, such as Frequency Regulation. Optimisation problem using real transportation data to determine the regulation capacity for the electricity markets. Using Matlab, Gurobi solver and YALMIP. Supervised by Pr. C. Jones.}
+\subsection{NLP Challenge - SemEval 2019 Task 6}
+\location{Imperial College, London | Spring 2019}
+\descript{Codalab Competition | \href{https://github.com/adrianlwn/SemEval-2019-Task-6}{\faGithubSquare{} Github Repository}}
+\longdescript{Classification of Offensive Tweets. Achieved the 5th best results for subtask B. Use of state of the art methods such as GRU, RNN or CNN. }
 \sectionsep
 
 \subsection{Tweet Awareness - Data Analysis}
@@ -193,6 +196,14 @@ Microcontrollers | Pr. Alexandre Schmidt | Spring 2015
 \descript{Group Project | \href{https://tweet-awareness.eu}{\faGlobe{} Data Story}}
 \longdescript{Data Analysis Project on how to measure the \textbf{awareness} of people about dramatic events around the world and how to correlate it to \textbf{cultural distances}. Data \textbf{extraction} from twitter using Python (Selenium, BeautifulSoup). Data \textbf{analysis} using Python (Pandas, Sklearn). Data \textbf{visualisation} using Javascript (D3.js).
 Group Project created in the context of the Applied Data Analysis course of Pr. R. West.}
+\sectionsep
+
+\section{Smart Grid Projects}
+
+\subsection{Provision of Multiple Services to the Grid with Plug-In-Electrical-Vehicles}
+\location{EPFL, Lausanne | Spring 2018}
+\descript{Master Thesis |  \href{https://stisrv13.epfl.ch/masters/img/960.pdf}{\faBook{} Poster of the Project} }
+\longdescript{Using Electrical Vehicles for providing services to the grid, such as Frequency Regulation. Optimisation problem using real transportation data to determine the regulation capacity for the electricity markets. Using Matlab, Gurobi solver and YALMIP. Supervised by Pr. C. Jones.}
 \sectionsep
 
 \subsection{Robust restoration in DG-incorporated distribution networks}
@@ -212,5 +223,7 @@ Group Project created in the context of the Applied Data Analysis course of Pr. 
 \descript{BSc Project | \href{https://desl-pwrs.epfl.ch}{\faGlobe{} EPFL Microgrid}}
 \longdescript{Implementation of a \textbf{Monitoring System} (in LabView) for a Fuel Cell and Electrolyser in the context of a Lab Microgrid. Supervised by Pr. M. Paolone.}
 \sectionsep
+
+
 
 \end{document}
